@@ -1,42 +1,40 @@
-# CHAT-LNM
+# LEO MODS BATE PAPO ONLINE ANONIMO
+AFINAL QUEM SOU EU LEO MODS OFC?
+UM POUCO SOBRE MIN
+BOM COMO TODOS VOCES DEVEM ME CONHECER PELO MEU NOME LEO MODS
+MAIS PQ O NOME LEO MODS?? BOM LEO É UM APELIDO MEU E POR ISSO DEIXEI LEO MODS 
+DESDA MINHA INFÂNCIA EU COM 8 ANO SEMPRE GOSTEI DE ASSISTER FILMES SÉRIES SOBRE O CONTEÚDO DE HACKING E COMPUTAÇÃO
+E HOJE ATUALMENTE ESTOU COM 15 ANOS TENTANDO SER UM POUCO 
+E ESTOU ESTUDANDO CONTEÚDOS DE HACKING NA WEB TENTANDO ME APROFUNDAR NO MUNDO DA COMPUTAÇÃO
 
-This is a anonymous chatting application
+MINHAS INSPIRAÇÃO
+REAL GHOST HACKER
+WILL PERITO
 
-## Getting Started
 
-### Prerequisites
+### PRÉ-REQUISITOS
 
-Nodejs, ExpressJS
+NODLEJS, EXPRESSJS
 
-### Installing
+### INSTALAÇÃO
 
-$ git clone https://github.com/chaitanyagiri/CHAT-LNM.git <br>
-$ cd CHAT-LNM<br>
-$ npm install<br>
-$ npm start <br>
+git clone https://github.com/LeonardoModz/LEOMODSCHAT<br>
+cd LEOMODSCHAT<br>
+npm install<br>
+npm start <br>
 
-## Deployment
+##  IMPLANTAÇÃO
 
-After installing you must get something like this
+APÓS A INSTALAÇÃO VOCÊ DEVE OBTER ALGO ASSIM
 ```
-listening on *:3000
+CHAT HOSPEDADO ON *:3000
 ```
-Then go to http://localhost:3000/ 
+ENTRE NO LINK APOS INSTALAR http://localhost:3000/ 
 
-## Built With
+## CONSTRUÍDO COM
 
-* [Nodejs]
-* [ExpressJS]
-* [Socket.io]
-* [JQuery]
-* [Bootstrap]
-
-## Contributing
-
-Just open an issue with your suggestion.
-
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
+* [NODEJS]
+* [EXPRESSJS]
+* [SOCKET.IO]
+* [JQUERY]
+* [BOOTSTRAP]

@@ -6,7 +6,7 @@ var express = require("express"),
   usernames = [];
   usernames[0] = "";
 server.listen(port, function(){
-  console.log('listening on *:' + port);
+  console.log('CHAT HOSPEDADO ON*:' + port);
 });
 app.use(express.static(__dirname + '/public'));
 app.get("/",function(request, response){
